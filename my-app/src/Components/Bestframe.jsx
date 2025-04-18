@@ -91,6 +91,7 @@ export default function Bestframe() {
                   <h3 className="font-medium text-lg">{artwork.title}</h3>
                   <p className="text-xs">{artwork.description}</p>
                   <p className="mt-2 font-semibold">{artwork.price}</p>
+                 
                 </div>
               </div>
             </div>

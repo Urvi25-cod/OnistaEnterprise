@@ -150,7 +150,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/privacy-policy"
+                    to="/PrivacyPolicy"
                     className="text-sm hover:text-gray-300 transition-colors"
                   >
                     Privacy Policy
@@ -158,7 +158,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/shipping-returns"
+                    to="/ShippingReturns"
                     className="text-sm hover:text-gray-300 transition-colors"
 
                   >
@@ -167,7 +167,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/terms-conditions"
+                    to="/TermsConditions"
                     className="text-sm hover:text-gray-300 transition-colors"
                   >
                     Terms & Conditions

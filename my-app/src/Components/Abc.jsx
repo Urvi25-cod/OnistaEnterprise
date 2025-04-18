@@ -84,50 +84,50 @@
 
 // export default Counter;
 
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-function Counter1() {
-  const [count, setCount] = useState(0);
+// function Counter1() {
+//   const [count, setCount] = useState(0);
 
-  const handleChangeValue = (event) => {
-    setCount(parseInt(event.target.value) || 0); // Parse input value or default to 0
-  };
+//   const handleChangeValue = (event) => {
+//     setCount(parseInt(event.target.value) || 0); // Parse input value or default to 0
+//   };
 
-  return (
-    <div className="p-5">
-      <h1 className="text-xl font-bold mb-4">Count: {count}</h1>
-      <input
-        type="number"
-        placeholder="Set value"
-        value={count}
-        onChange={handleChangeValue}
-        className="border border-gray-300 rounded-md p-2 mb-4 w-full"
-      />
-      {/* Buttons in vertical layout */}
-      <div className="flex w-120 flex-col space-y-3 text-white">
-        <button
-          onClick={() => setCount(count + 1)}
-          className="p-3 bg-orange-600 rounded-xl cursor-pointer"
-        >
-          Increment
-        </button>
-        <button
-          onClick={() => setCount(count - 1)}
-          className="p-3 w-120 bg-orange-600 rounded-xl cursor-pointer"
-        >
-          Decrement
-        </button>
-        <button
-          onClick={() => setCount(0)}
-          className="p-2 w-120 bg-orange-600 rounded-xl cursor-pointer"
-        >
-          Reset
-        </button>
-      </div>
-    </div>
-  );ss
-}
+//   return (
+//     <div className="p-5">
+//       <h1 className="text-xl font-bold mb-4">Count: {count}</h1>
+//       <input
+//         type="number"
+//         placeholder="Set value"
+//         value={count}
+//         onChange={handleChangeValue}
+//         className="border border-gray-300 rounded-md p-2 mb-4 w-full"
+//       />
+//       {/* Buttons in vertical layout */}
+//       <div className="flex w-120 flex-col space-y-3 text-white">
+//         <button
+//           onClick={() => setCount(count + 1)}
+//           className="p-3 bg-orange-600 rounded-xl cursor-pointer"
+//         >
+//           Increment
+//         </button>
+//         <button
+//           onClick={() => setCount(count - 1)}
+//           className="p-3 w-120 bg-orange-600 rounded-xl cursor-pointer"
+//         >
+//           Decrement
+//         </button>
+//         <button
+//           onClick={() => setCount(0)}
+//           className="p-2 w-120 bg-orange-600 rounded-xl cursor-pointer"
+//         >
+//           Reset
+//         </button>
+//       </div>
+//     </div>
+//   );ss
+// }
 
-export default Counter1;
+// export default Counter1;
 
 

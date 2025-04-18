@@ -695,6 +695,7 @@ export default function ProductDetail() {
   ])
   const [basePrice, setBasePrice] = useState(120000.0)
   const [selectedImage, setSelectedImage] = useState(p1)
+  
   const toggleCart = () => setIsCartOpen(!isCartOpen)
 
 

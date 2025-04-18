@@ -168,8 +168,9 @@ export default function Navbar() {
             <Link to="/Aboutpage" className="hover:text-gray-500">About</Link>
             <Link to="/News" className="hover:text-gray-500">News</Link>
             <Link to="/Contact" className="hover:text-gray-500">Contact</Link>
-            <Link to="/CustomizeProduct" className="hover:text-gray-500">Customize Product</Link>
+            <Link to="/ProductCustomizer" className="hover:text-gray-500">Customize Product</Link>
           </div>
+
 
           {/* Icons */}
           <div className="flex items-center space-x-6">
@@ -179,7 +180,7 @@ export default function Navbar() {
             </button>
 
             {/* <Link to={'/Cart'}>  */}
-            <button className="hover:text-gray-500 focus:outline-none cursor-pointer" onClick={toggleCart}>
+            <button onClick={toggleCart} className="hover:text-gray-500 focus:outline-none cursor-pointer" >
               <img src={cart} alt="Cart" className="h-5 w-5 " />
             </button>
             {/* </Link> */}

@@ -169,7 +169,7 @@ export default function Login({ onClose ,toggSigupPopup}) {
               {/* Login Button */}
              <Link to={'/ProfilePage'}> <button
                 type="submit"
-                className="w-full bg-black text-white py-3 px-4 font-light tracking-wide" onClick={onClose}
+                className="w-full bg-black text-white py-3 px-4 font-light tracking-wide cursor-pointer" onClick={onClose}
               >
                 Log In
               </button></Link>

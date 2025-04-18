@@ -83,7 +83,7 @@ export default function Signup({ onClose, }) {
                                 {/* Login Button */}
                                 <button
                                     type="submit"
-                                    className="w-full bg-black text-white py-3 px-4 font-light tracking-wide"
+                                    className="w-full bg-black text-white py-3 px-4 font-light tracking-wide cursor-pointer"
                                 >
                                     Sign Up
                                 </button>

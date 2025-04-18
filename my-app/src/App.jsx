@@ -13,7 +13,10 @@ import ProductListing from './Components/ProductListing';
 // import Signup from './Components/Signup';
 import Navbar from './Components/Navbar';
 import ProfilePage from "./Components/ProfilePage";
-import CustomizeProduct from "./Components/CustomizeProduct";
+import ShippingReturns from "./Components/ShippingReturns";
+import PrivacyPolicy from "./Components/PrivacyPolicy";
+import TermsConditions from "./Components/TermsConditions";
+import ProductCustomizer from "./Components/ProductCustomizer";
 
 
 
@@ -38,8 +41,10 @@ function App() {
           <Route path='/Singleproduct' element={<Singleproduct />} />
           <Route path='/ProductListing' element={<ProductListing />} />
           <Route path='/ProfilePage' element={<ProfilePage/>} />
-          <Route path='/CustomizeProduct' element={<CustomizeProduct/>} />
-
+          <Route path='/ProductCustomizer' element={<ProductCustomizer/>} />
+          <Route path='/ShippingReturns' element={<ShippingReturns/>} />
+          <Route path='/PrivacyPolicy' element={<PrivacyPolicy/>} />
+          <Route path='/TermsConditions' element={<TermsConditions/>} />
         </Routes>
 
 
