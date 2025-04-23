@@ -86,21 +86,23 @@ const WallArtIntro = () => {
           <img
             src={f1}
             alt="Flower"
-            className="absolute top-4 left-4 w-16 md:w-28 hidden md:block"
+            className="absolute top-1 left-1 w-16 md:w-28  hidden md:block"
           />
 
           {/* Bottom Flower - hidden on mobile */}
           <img
             src={f2}
             alt="Flower"
-            className="absolute bottom-4 xl:left-210 lg:left-100 md:left-160 w-16 md:w-28 hidden md:block"
+            // className="absolute bottom-4 xl:left-210 lg:left-100 md:left-160 w-16 md:w-28 hidden md:block"
+            className="absolute 2xl:left-213 bottom-1 xl:left-135 lg:left-103  md:left-167  w-16 md:w-28 hidden md:block "
+
           />
 
           {/* Text Content */}
           <div className="max-w-2xl mx-auto relative">
             <h2
               style={{ fontFamily: "Times New Roman" }}
-              className="text-2xl md:text-3xl lg:text-4xl mb-6 text-gray-800 text-center lg:text-left"
+              className="text-2xl md:text-3xl lg:text-4xl mb-6 text-gray-800 text-center lg:text-left "
             >
               ART THAT SPEAKS, WALLS THAT INSPIRE
             </h2>

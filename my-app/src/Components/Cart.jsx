@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import {  X } from "lucide-react";
 import img from "../image/pro2.svg";
+import { Link } from "react-router-dom";
 
 
 
@@ -125,9 +126,9 @@ export default function Cart({ toggleCart }) {
             <span>Total</span>
             <span>₹{formatPrice(total)}</span>
           </div>
-          <button className="w-full bg-black text-white py-3 font-normal mt-4 hover:bg-gray-800 transition cursor-pointer">
+          <Link to={'/CheckoutPage'}><button className="w-full bg-black text-white py-3 font-normal mt-4 hover:bg-gray-800 transition cursor-pointer">
             Check Out
-          </button>
+          </button></Link>
         </div>
       </div>
     </>

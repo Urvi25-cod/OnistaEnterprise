@@ -10,6 +10,7 @@ const OnistaInspired = () => {
     return (
         <>
          {/* <Navbar bgColor="" textColor="text-black"/> */}
+         <div className="bg-[#EEFFF3]"> 
             <div className="bg-[#EEFFF3] py-12 px-4 mx-auto max-w-7xl sm:px-8 lg:px-16">
                 {/* Header Section */}
                 <div style={{fontFamily:"Times New Roman"}} className="text-center mb-8">
@@ -83,6 +84,7 @@ const OnistaInspired = () => {
                         </button></Link>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     );

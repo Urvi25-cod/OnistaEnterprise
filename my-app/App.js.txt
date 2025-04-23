@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 // import Footer from './Components/Footer';
 // import Aboutpage from './Components/Aboutpage';
 // import Home from './Components/Home';
@@ -34,8 +33,6 @@ const ShippingReturns = lazy(() => import("./Components/ShippingReturns"));
 const PrivacyPolicy = lazy(() => import("./Components/PrivacyPolicy"));
 const ProductListing = lazy(() => import("./Components/ProductListing"));
 const TermsConditions = lazy(() => import("./Components/TermsConditions"));
-const CheckoutPage = lazy(() => import("./Components/CheckoutPage"));
-const ArticleDetail = lazy(() => import("./Components/ArticleDetail"));
 
 function App() {
 
@@ -51,10 +48,10 @@ function App() {
         <Navbar />
         <Routes>
           {/* <Route path='/Login' element={<Login/>} /> */}
-          <Route path='/' element={<Home/>} />
+          <Route path='/' element={<Home />} />
           <Route path='/Aboutpage' element={<Aboutpage />} />
           <Route path='/Contact' element={<Contact />} />
-          {/* <Route path='/News' element={<News />} /> */}
+          <Route path='/News' element={<News />} />
           <Route path='/Cart' element={<Cart />} />
           <Route path='/Singleproduct' element={<Singleproduct />} />
           <Route path='/ProductListing' element={<ProductListing />} />
@@ -63,10 +60,6 @@ function App() {
           <Route path='/ShippingReturns' element={<ShippingReturns/>} />
           <Route path='/PrivacyPolicy' element={<PrivacyPolicy/>} />
           <Route path='/TermsConditions' element={<TermsConditions/>} />
-          <Route path='/CheckoutPage' element={<CheckoutPage/>} />
-          <Route path="/news" element={<News />} />
-          <Route path="/news/:id" element={<ArticleDetail />} />
-          
         </Routes>
 
 

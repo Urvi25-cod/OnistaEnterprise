@@ -1,3 +1,74 @@
+// import React, { useEffect, useState } from "react";
+// import Items from "./Items";
+// import WallArtIntro from "./WallArtIntro";
+// import Frame from "./Frame";
+// import InteriorDesign from "./InteriorDesign";
+// import Login from "./Login";
+// import Signup from "./Signup";
+
+// export default function Home() {
+//   const [showLogin, setShowLogin] = useState(false);
+//   const [showSignup, setShowSignup] = useState(false);
+
+//   useEffect(() => {
+//     const handleBeforeUnload = () => {
+//       sessionStorage.removeItem("popupClosed");
+//     };
+
+//     window.addEventListener("beforeunload", handleBeforeUnload);
+
+//     const popupClosedThisSession = sessionStorage.getItem("popupClosed");
+//     setShowLogin(!popupClosedThisSession);
+
+//     return () => {
+//       window.removeEventListener("beforeunload", handleBeforeUnload);
+//     };
+//   }, []);
+
+//   const handleCloseLogin = () => {
+//     sessionStorage.setItem("popupClosed", "true");
+//     setShowLogin(false);
+//   };
+
+//   const toggleSignupPopup = () => {
+//     sessionStorage.setItem("popupClosed", "true");
+//     setShowLogin(false);
+//     setShowSignup(true);
+//   };
+
+//   return (
+//     <>
+//       {/* Fullscreen dark blur background */}
+//       {showLogin && (
+//         <div className="fixed inset-0 bg-black/80 bg-opacity-50 backdrop-blur-sm z-40"></div>
+//       )}
+
+//       {/* Login and Signup Popups */}
+//       <div className="relative z-50">
+//         {showLogin && (
+//           <Login onClose={handleCloseLogin} toggSigupPopup={toggleSignupPopup} />
+//         )}
+//         {showSignup && (
+//           <Signup onClose={() => setShowSignup(false)} />
+//         )}
+//       </div>
+
+//       {/* Main Content - Blurred/Disabled when Login is open */}
+//       <div className={showLogin ? 'pointer-events-none select-none transition duration-300' : ''}>
+//       <InteriorDesign />
+//         <Items />
+//         <WallArtIntro />
+//         <Items />
+//         <Frame />
+//       </div>
+//     </>
+//   );
+// }
+
+
+
+
+
 import React from 'react';
 import logo from "../image/logo.svg";
 import lo1 from "../image/lo1.svg";
@@ -8,7 +79,7 @@ export default function Signup({ onClose, }) {
 
             <div className="fixed inset-0 flex justify-center items-center z-50">
                 <div
-                    className="bg-white rounded-lg shadow-lg w-full max-w-4xl flex overflow-hidden relative"
+                    className="rounded-lg shadow-lg w-full max-w-4xl flex overflow-hidden relative"
                     onClick={(e) => e.stopPropagation()}
                 >
                     {/* Close Button */}
@@ -30,10 +101,10 @@ export default function Signup({ onClose, }) {
                     </div>
 
                     {/* Right Side - Login Form */}
-                    <div className="w-full md:w-1/2 p-8 flex items-center">
+                    <div className="w-full bg-white  md:w-1/2 p-8 flex items-center">
                         <div className="w-full">
                             {/* Logo */}
-                            <img src={logo} alt="Logo" className="h-12 mx-auto mb-6" />
+                            <img src={logo} alt="Logo" className="h-22 w-auto mx-auto mx-auto mb-6" />
 
                             {/* Welcome Text */}
                             <h2 className="text-center text-xl mb-8 font-serif">Welcome Back!</h2>

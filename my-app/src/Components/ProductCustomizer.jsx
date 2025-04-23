@@ -2702,6 +2702,7 @@
 import { Upload, RotateCw } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import Cart from "./Cart";
+import { Link } from "react-router-dom";
 
 export default function ProductCustomizer() {
   const [selectedSize, setSelectedSize] = useState("17.5×11.5");
@@ -2965,11 +2966,11 @@ export default function ProductCustomizer() {
 
       {/* Breadcrumb */}
       <div className="text-sm mb-6">
-        <span className="text-gray-500">Home</span>
+        <Link to={'/'}><span style={{ fontFamily: "Times New Roman" }} className="text-gray-800 hover:underline">Home</span></Link>
         <span className="mx-2 text-gray-500"></span>
-        <span className="text-gray-500">Fruitland</span>
+        <span style={{ fontFamily: "Times New Roman" }} className="text-gray-800">Fruitland</span>
         <span className="mx-2 text-gray-500"></span>
-        <span className="text-gray-500">Customize</span>
+        <span style={{ fontFamily: "Times New Roman" }} className="text-gray-800">Customize</span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">

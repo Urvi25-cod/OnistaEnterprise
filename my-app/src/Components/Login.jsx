@@ -114,7 +114,7 @@ export default function Login({ onClose ,toggSigupPopup}) {
   return (
     <div className="fixed inset-0 flex justify-center items-center z-50">
       <div
-        className="bg-white rounded-lg shadow-lg w-full max-w-4xl flex overflow-hidden relative"
+        className="rounded-lg shadow-lg w-full max-w-4xl flex overflow-hidden relative"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -136,10 +136,10 @@ export default function Login({ onClose ,toggSigupPopup}) {
         </div>
 
         {/* Right Side - Login Form */}
-        <div className="w-full md:w-1/2 p-8 flex items-center">
+        <div className=" bg-white w-full md:w-1/2 p-8 flex items-center">
           <div className="w-full">
             {/* Logo */}
-            <img src={logo} alt="Logo" className="h-12 mx-auto mb-6" />
+            <img src={logo} alt="Logo" className="h-22 w-auto mx-auto mb-6" />
 
             {/* Welcome Text */}
             <h2 className="text-center text-xl mb-8 font-serif">Welcome Back!</h2>

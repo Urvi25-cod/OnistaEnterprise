@@ -1296,7 +1296,7 @@ export default function ProductDetail() {
                   {/* Icons - always visible on mobile, hover on desktop */}
                   <div className="absolute top-4 right-4 flex flex-col gap-2 sm:opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                     <Link href="/">
-                      <button className="bg-black text-white p-2 rounded-full hover:bg-gray-800 cursor-pointer">
+                      <button className="bg-black text-white p-2 rounded-full hover:bg-gray-800 cursor-pointer" onClick={toggleCart}>
                         <ShoppingBag size={18} />
                       </button>
                     </Link>

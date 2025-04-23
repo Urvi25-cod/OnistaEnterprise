@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { ShoppingBag } from "lucide-react";
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+// import Cart from "./Cart";
+import Cart from "./Cart";
 
 
 import pp1 from "../image/pp1.svg";
@@ -40,7 +42,14 @@ const artworks = [
     },
   ];
 
+  
+
 const Items  = () => {
+
+  const [isCartOpen, setIsCartOpen] = useState(false)
+  const toggleCart = () => setIsCartOpen(!isCartOpen)
+
+ 
   return (
     <>
 
@@ -58,44 +67,40 @@ const Items  = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {artworks.map((artwork) => (
-           <Link to={'/Singleproduct'}><div
-              key={artwork.id}
-              className="relative rounded-lg overflow-hidden group"
-            >
-              <div className="aspect-square relative">
-                <img
-                  src={artwork.image || "/placeholder.svg"}
-                  alt={artwork.title || "Artwork"}
-                  fill
-                  className="object-cover"
-                />
+  {artworks.map((artwork) => (
+    <div key={artwork.id} className="relative rounded-lg overflow-hidden group">
+      <div className="aspect-square relative">
+        {/* Clicking the image navigates to Singleproduct */}
+        <Link to="/Singleproduct">
+          <img
+            src={artwork.image || "/placeholder.svg"}
+            alt={artwork.title || "Artwork"}
+            className="w-full h-full object-cover"
+          />
+        </Link>
 
-                {/* Icons that appear on hover */}
-                <div className="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Link to="/Singleproduct"><button className="bg-black text-white p-2 rounded-full hover:bg-gray-800 cursor-pointer">
-                    <ShoppingBag size={18} />
-                  </button>
-                  </Link>
-                  <Link to="/">
-                  {/* <button className="bg-black text-white p-2 rounded-full hover:bg-gray-800 cursor-pointer">
-                    <Heart size={18} />
-                  </button> */}
-                  </Link>
-                </div>
-
-                {/* Description overlay that appears on hover */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
-                  <h3 className="font-medium text-lg">{artwork.title}</h3>
-                  <p className="text-xs">{artwork.description}</p>
-                  <p className="mt-2 font-semibold">{artwork.price}</p>
-                </div>
-              </div>
-
-              
-            </div></Link>
-          ))}
+        {/* Cart icon - opens Cart page */}
+        <div className="absolute top-4 right-4 flex flex-col gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+          <button
+            className="bg-black text-white p-2 rounded-full hover:bg-gray-800 cursor-pointer" onClick={toggleCart}
+          >
+            <ShoppingBag size={18} />
+          </button>
         </div>
+
+        {/* Info - visible always on mobile, on hover in desktop */}
+        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white 
+          translate-y-0 md:translate-y-full md:group-hover:translate-y-0 
+          transition-transform duration-300 ease-in-out">
+          <h3 className="font-medium text-lg">{artwork.title}</h3>
+          <p className="text-xs">{artwork.description}</p>
+          <p className="mt-2 font-semibold">{artwork.price}</p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
         <div className="flex justify-center items-center  mt-10">
       <button
         style={{ fontFamily: "Times New Roman" }}
@@ -105,8 +110,12 @@ const Items  = () => {
       </button>
     </div>
       </div>
+      {isCartOpen && (
+              <Cart toggleCart={toggleCart} />
+            )}
     </>
   );
 };
 
 export default Items ;
+

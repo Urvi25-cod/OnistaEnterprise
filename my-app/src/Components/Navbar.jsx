@@ -154,15 +154,15 @@ export default function Navbar() {
     <>
       {/* Navbar */}
       <header className='bg-white top-0 sticky z-50'>
-        <nav className="flex justify-between bg-white items-center px-4 py-5 mx-auto max-w-7xl">
+        <nav className="flex justify-between bg-white items-center px-0 py-3 mx-auto max-w-7xl">
           <div className="flex justify-start">
             <Link to={'/'}>
-              <img src={logo} alt="Logo" className="h-10 w-auto md:h-10 lg:h-20 cursor-pointer" />
+              <img src={logo} alt="Logo" className="h-10 w-auto md:h-12 sm:h-25 lg:h-20 cursor-pointer" />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div style={{ fontFamily: "Times New Roman" }} className="hidden md:flex space-x-6 text-xl">
+          <div style={{ fontFamily: "Times New Roman" }} className="hidden md:flex space-x-8 text-xl">
             <a href="/" className="hover:text-gray-500">Home</a>
             <Link to={'/ProductListing'}><span className="hover:text-gray-500">Product</span></Link>
             <Link to="/Aboutpage" className="hover:text-gray-500">About</Link>
@@ -201,10 +201,10 @@ export default function Navbar() {
 
       {/* Search Pop-Up */}
       {isSearchPopupOpen && (
-        <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md p-4 h-30">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md p-4 h-33">
           <div className="max-w-7xl mx-auto flex items-center space-x-4 mt-6">
             {/* Logo */}
-            <img src={logo} alt="Logo" className="h-10 w-auto cursor-pointer" />
+            <img src={logo} alt="Logo" className="h-10 w-auto md:h-10 lg:h-20 cursor-pointer" />
 
             {/* Search Bar */}
             <form onSubmit={handleSearchSubmit} className="relative flex-grow">
